@@ -1,48 +1,52 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using psymed_platform.IAM.Domain.Model.Aggregates;
 using psymed_platform.IAM.Domain.Model.Repositories;
+using psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 namespace psymed_platform.IAM.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly List<User> _users = new();
+        private readonly AppDbContext _context;
+
+        public UserRepository(AppDbContext context)
+        {
+            _context = context;
+        }
 
         public async Task<User> GetByIdAsync(string id)
         {
-            return _users.FirstOrDefault(u => u.Id == id);
+            return await _context.Users.FindAsync(id);
         }
 
         public async Task<User> GetByUsernameAsync(string username)
         {
-            return _users.FirstOrDefault(u => u.Username == username);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
         }
 
         public async Task<User> GetByEmailAsync(string email)
         {
-            return _users.FirstOrDefault(u => u.Email == email);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
         public async Task<IEnumerable<User>> GetAllAsync()
         {
-            return _users;
+            return await _context.Users.ToListAsync();
         }
 
         public async Task<User> AddAsync(User user)
         {
-            _users.Add(user);
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
             return user;
         }
 
         public async Task<User> UpdateAsync(User user)
         {
-            var existingUser = await GetByIdAsync(user.Id);
-            if (existingUser == null) return null;
-
-            _users.Remove(existingUser);
-            _users.Add(user);
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
             return user;
         }
 
@@ -51,7 +55,9 @@ namespace psymed_platform.IAM.Infrastructure.Repositories
             var user = await GetByIdAsync(id);
             if (user == null) return false;
 
-            return _users.Remove(user);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

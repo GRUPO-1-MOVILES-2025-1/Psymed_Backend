@@ -73,6 +73,8 @@ builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 // Registrar servicios de aplicación
 builder.Services.AddScoped<IProfileCommandService, ProfileCommandService>();
 
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProfileCommandService, ProfileCommandService>();
 // Registrar servicios de IAM
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<AuthCommandService>(provider => 
@@ -83,6 +85,7 @@ builder.Services.AddScoped<AuthCommandService>(provider =>
 
 var app = builder.Build();
 
+Console.WriteLine($"Cadena de conexión usada: {connectionString}");
 
 app.UseSwagger();
 app.UseSwaggerUI();

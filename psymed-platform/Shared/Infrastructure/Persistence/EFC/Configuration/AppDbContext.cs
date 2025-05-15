@@ -13,6 +13,7 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
 
         public DbSet<Medication.Domain.Model.Aggregates.Medication> Medications { get; set; }
         public DbSet<psymed_platform.Appoiment_Administration.Domain.Models.Appointment> Appointments { get; set; }
+        public DbSet<psymed_platform.IAM.Domain.Model.Aggregates.User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {

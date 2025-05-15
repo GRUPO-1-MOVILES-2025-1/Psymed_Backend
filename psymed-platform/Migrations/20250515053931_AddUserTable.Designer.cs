@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
@@ -11,9 +12,11 @@ using psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 namespace psymed_platform.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250515053931_AddUserTable")]
+    partial class AddUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,17 +54,10 @@ namespace psymed_platform.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
 
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -71,27 +67,11 @@ namespace psymed_platform.Migrations
                     b.Property<DateTime?>("LastLogin")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Roles")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Ubication")
                         .IsRequired()
                         .HasColumnType("longtext");
 

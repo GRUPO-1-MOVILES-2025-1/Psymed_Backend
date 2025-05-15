@@ -46,8 +46,17 @@ namespace psymed_platform.IAM.Appilcation.Internal.CommandServices
                 return (false, "Email already exists");
 
             var passwordHash = BC.HashPassword(command.Password);
-            var user = new Domain.Model.Aggregates.User(command.Username, command.Email, passwordHash);
-            
+            var user = new Domain.Model.Aggregates.User(
+                command.Username,
+                command.Email,
+                passwordHash,
+                command.Name,
+                command.LastName,
+                command.BirthDate,
+                command.Gender,
+                command.Phone,
+                command.Ubication
+            );            
             await _userRepository.AddAsync(user);
             return (true, null);
         }

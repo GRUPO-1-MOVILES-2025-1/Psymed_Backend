@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "8+XXYqj9b2/PqszrRgawfWxipMofcsNAni1qftsX3AQ=",
+  "Hash": "rLmOTW/v1gCj20JrEgtjL1DE7rdC7C4ClGwhVfRTgLY=",
   "Source": "psymed-platform",
   "BasePath": "_content/psymed-platform",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

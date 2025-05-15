@@ -43,7 +43,13 @@ namespace psymed_platform.IAM.Interfaces.REST
             {
                 Username = resource.Username,
                 Email = resource.Email,
-                Password = resource.Password
+                Password = resource.Password,
+                Name = resource.Name,
+                LastName = resource.LastName,
+                BirthDate = resource.BirthDate,
+                Gender = resource.Gender,
+                Phone = resource.Phone,
+                Ubication = resource.Ubication
             };
 
             var (success, error) = await _authCommandService.RegisterAsync(command);
