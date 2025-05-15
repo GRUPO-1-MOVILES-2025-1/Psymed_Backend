@@ -84,15 +84,10 @@ builder.Services.AddScoped<AuthCommandService>(provider =>
 var app = builder.Build();
 
 
-// Habilitar Swagger en modo de desarrollo
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
-
-app.UseAuthentication(); // Agregar esto para habilitar la autenticación
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
