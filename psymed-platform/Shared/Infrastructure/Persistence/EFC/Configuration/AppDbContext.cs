@@ -51,7 +51,7 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
             modelBuilder.Entity<Medication.Domain.Model.Aggregates.Medication>()
                 .OwnsOne(m => m.Prescription);
 
-            
+
 
             modelBuilder.Entity<psymed_platform.Appoiment_Administration.Domain.Models.Appointment>()
                 .ToTable("Appointments")
@@ -60,6 +60,24 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
             modelBuilder.Entity<psymed_platform.Appoiment_Administration.Domain.Models.Appointment>()
                 .Property(a => a.Fecha)
                 .HasColumnType("datetime");
+            // Configuración User (asegura que se cree la tabla Users)
+            modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
+                .ToTable("Users")
+                .HasKey(u => u.Id);
+            modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
+                .Property(u => u.BirthDate)
+                .HasColumnType("datetime");
+
+            modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
+                .Property(u => u.CreatedAt)
+                .HasColumnType("datetime");
+
+            modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
+                .Property(u => u.LastLogin)
+                .HasColumnType("datetime");
+            modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
+                .Property(u => u.Id)
+                .HasColumnType("varchar(191)");
         }
     }
 }

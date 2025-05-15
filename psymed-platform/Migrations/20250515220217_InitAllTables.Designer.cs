@@ -12,8 +12,8 @@ using psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 namespace psymed_platform.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250515033946_InitClean")]
-    partial class InitClean
+    [Migration("20250515220217_InitAllTables")]
+    partial class InitAllTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,64 @@ namespace psymed_platform.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Appointments", (string)null);
+                });
+
+            modelBuilder.Entity("psymed_platform.IAM.Domain.Model.Aggregates.User", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(191)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("LastLogin")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Roles")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Ubication")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("psymed_platform.Medication.Domain.Model.Aggregates.Medication", b =>

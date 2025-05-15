@@ -455,9 +455,6 @@ D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-platform.pdb
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-platform.genruntimeconfig.cache
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\ref\psymed-platform.dll
-D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.Development.json
-D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.json
-D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.Production.json
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\web.config
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\web.config
@@ -467,6 +464,9 @@ D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platf
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\web.config
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\web.config
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\web.config
+D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.Development.json
+D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.json
+D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\appsettings.Production.json
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\appsettings.Development.json
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\appsettings.json
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\appsettings.Production.json
