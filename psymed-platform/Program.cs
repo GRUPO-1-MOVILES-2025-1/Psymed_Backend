@@ -56,6 +56,17 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+// ✅ HABILITAR CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()    // Puedes restringir luego por seguridad
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // Agregar controladores y Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -89,6 +100,7 @@ Console.WriteLine($"Cadena de conexión usada: {connectionString}");
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors(); // 👈 Esto aplica la política CORS que definiste
 
 app.UseAuthentication();
 app.UseAuthorization();

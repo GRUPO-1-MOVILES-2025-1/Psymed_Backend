@@ -30,6 +30,7 @@ namespace psymed_platform.IAM.Interfaces.REST
 
             return Ok(new AuthResponseResource
             {
+                Username = resource.Username,
                 Success = success,
                 Token = token,
                 Error = success ? null : "Invalid username or password"
