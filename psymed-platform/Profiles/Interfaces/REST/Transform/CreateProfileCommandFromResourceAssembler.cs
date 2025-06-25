@@ -18,14 +18,17 @@ public static class CreateProfileCommandFromResourceAssembler
         if (resource == null)
             throw new ArgumentNullException(nameof(resource), "Resource cannot be null");
 
-        return new CreateProfileCommand(
-            resource.FirstName,
-            resource.LastName,
-            resource.Email,
-            resource.Weight,
-            resource.Height,
-            resource.Phone,
-            resource.Role
-        );
+        return new CreateProfileCommand
+        {
+            UserId = "",
+            FirstName = resource.FirstName,
+            LastName = resource.LastName,
+            Email = resource.Email,
+            Weight = resource.Weight,
+            Height = resource.Height,
+            Phone = resource.Phone,
+            Role = resource.Role,
+            Ubication = resource.Ubication
+        };
     }
 }

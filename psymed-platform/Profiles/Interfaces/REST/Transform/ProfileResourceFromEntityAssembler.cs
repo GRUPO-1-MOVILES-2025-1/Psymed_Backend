@@ -16,16 +16,18 @@ public static class ProfileResourceFromEntityAssembler
     public static ProfileResource ToResourceFromEntity(Profile entity)
     {
         if (entity == null)
-            throw new ArgumentNullException(nameof(entity), "Entity cannot be null");
+            throw new ArgumentNullException(nameof(entity));
 
         return new ProfileResource(
             entity.Id,
-            entity.FullName,
+            entity.FirstName,
+            entity.LastName,
             entity.EmailAddress,
-            entity.Weight,
-            entity.Height,
             entity.PhoneNumber,
-            entity.RoleType
+            entity.BirthDate,
+            entity.Height,
+            entity.Weight,
+            entity.Ubication
         );
     }
 }

@@ -53,6 +53,9 @@
 
     <ItemGroup>
       <Content Remove="Medication\Interfaces\ACL\**" />
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>

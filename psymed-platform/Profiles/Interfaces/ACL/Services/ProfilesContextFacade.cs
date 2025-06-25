@@ -30,7 +30,17 @@ public class ProfilesContextFacade : IProfilesContextFacade
     /// <returns>The ID of the created profile, or 0 if creation failed.</returns>
     public async Task<int> CreateProfile(string firstName, string lastName, string email, string weight, string height, string phone, string role)
     {
-        var createProfileCommand = new CreateProfileCommand(firstName, lastName, email, weight, height, phone, role);
+        var createProfileCommand = new CreateProfileCommand
+        {
+            UserId = "",
+            FirstName = firstName,
+            LastName = lastName,
+            Email = email,
+            Weight = weight,
+            Height = height,
+            Phone = phone,
+            Role = role
+        };
         try
         {
             var profile = await _profileCommandService.Handle(createProfileCommand);

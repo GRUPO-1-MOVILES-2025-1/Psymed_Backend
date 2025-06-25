@@ -125,4 +125,24 @@ public class ProfilesController : ControllerBase
             return StatusCode(500, "Internal server error");
         }
     }
+    
+    [HttpGet("byUserId/{userId}")]
+    public async Task<IActionResult> GetProfileByUserId(string userId)
+    {
+        try
+        {
+            var getProfileByUserIdQuery = new GetProfileByUserIdQuery(userId);
+            var profile = await _profileQueryService.Handle(getProfileByUserIdQuery);
+
+            if (profile == null) return NotFound();
+
+            var profileResource = ProfileResourceFromEntityAssembler.ToResourceFromEntity(profile);
+            return Ok(profileResource);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while fetching profile by userId: {ex.Message}");
+            return StatusCode(500, "Internal server error");
+        }
+    }
 }

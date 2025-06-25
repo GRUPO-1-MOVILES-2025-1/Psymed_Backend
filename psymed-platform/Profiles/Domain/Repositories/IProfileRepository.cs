@@ -7,5 +7,5 @@ namespace psymed_platform.Profiles.Domain.Repositories;
 /// </summary>
 public interface IProfileRepository : IBaseRepository<Profile>
 {
-    
+    Task<Profile?> FindByUserIdAsync(string userId);
 }
