@@ -6,6 +6,7 @@ using psymed_platform.Tasks.Application.Internal.CommandServices;
 using psymed_platform.Tasks.Application.Internal.QueryServices;
 using psymed_platform.Tasks.Interfaces.REST.Resources;
 using psymed_platform.Tasks.Interfaces.REST.Transform;
+using psymed_platform.Tasks.Domain.Model.Repositories;
 
 namespace psymed_platform.Tasks.Interfaces.REST
 {

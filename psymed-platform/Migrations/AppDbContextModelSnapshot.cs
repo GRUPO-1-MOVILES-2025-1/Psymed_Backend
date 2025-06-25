@@ -121,6 +121,36 @@ namespace psymed_platform.Migrations
                     b.ToTable("medications", (string)null);
                 });
 
+            modelBuilder.Entity("psymed_platform.Tasks.Domain.Model.Aggregates.Task", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("IdPatient")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tasks", (string)null);
+                });
+
             modelBuilder.Entity("psymed_platform.Medication.Domain.Model.Aggregates.Medication", b =>
                 {
                     b.OwnsOne("psymed_platform.Medication.Domain.Model.ValueObjects.Prescription", "Prescription", b1 =>

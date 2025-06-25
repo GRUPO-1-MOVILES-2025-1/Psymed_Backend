@@ -8,7 +8,7 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
+        public DbSet<psymed_platform.Tasks.Domain.Model.Aggregates.Task> Tasks { get; set; }
         public AppDbContext() { }
 
         public DbSet<Medication.Domain.Model.Aggregates.Medication> Medications { get; set; }
@@ -78,6 +78,14 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
             modelBuilder.Entity<psymed_platform.IAM.Domain.Model.Aggregates.User>()
                 .Property(u => u.Id)
                 .HasColumnType("varchar(191)");
+            
+            modelBuilder.Entity<psymed_platform.Tasks.Domain.Model.Aggregates.Task>(entity =>
+            {
+                entity.ToTable("Tasks");
+                entity.HasKey(t => t.Id);
+                entity.Property(t => t.Id).IsRequired();
+            });
+            
         }
     }
 }
