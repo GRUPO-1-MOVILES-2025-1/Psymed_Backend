@@ -443,12 +443,6 @@ D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets.build.json
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets.development.json
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets\msbuild.psymed-platform.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets\msbuild.psymed-platform.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets\msbuild.build.psymed-platform.props
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.psymed-platform.props
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.psymed-platform.props
-D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-p.12E9BFB8.Up2Date
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-platform.dll
 D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\refint\psymed-platform.dll
@@ -691,3 +685,15 @@ D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platf
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-platform.pdb
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\obj\Debug\net8.0\psymed-platform.genruntimeconfig.cache
 D:\RENATO\2025-1\Aplicaciones_Moviles\Github\Backend\Psymed_Backend\psymed-platform\obj\Debug\net8.0\ref\psymed-platform.dll
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Production.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\psymed-platform.deps.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\psymed-platform.runtimeconfig.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\bin\Debug\net8.0\publish\publish\publish\publish\publish\publish\publish\publish\publish\psymed-platform.staticwebassets.endpoints.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Universidad\9no Ciclo\Aplicaciones para Dispositivos Moviles\TF\Repos\Psymed_Backend\psymed-platform\obj\Debug\net8.0\staticwebassets.build.json.cache

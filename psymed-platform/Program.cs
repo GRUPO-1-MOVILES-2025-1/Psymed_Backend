@@ -7,6 +7,7 @@ using psymed_platform.IAM.Appilcation.Internal.CommandServices;
 using psymed_platform.IAM.Domain.Model.Repositories;
 using psymed_platform.IAM.Infrastructure.Repositories;
 using psymed_platform.Profiles.Application.Internal.CommandServices;
+using psymed_platform.Profiles.Application.Internal.QueryServices;
 using psymed_platform.Profiles.Domain.Repositories;
 using psymed_platform.Profiles.Domain.Services;
 using psymed_platform.Profiles.Infrastructure.Persistence.EFC.Repositories;
@@ -84,8 +85,6 @@ builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 // Registrar servicios de aplicación
 builder.Services.AddScoped<IProfileCommandService, ProfileCommandService>();
 
-builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
-builder.Services.AddScoped<IProfileCommandService, ProfileCommandService>();
 // Registrar servicios de IAM
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<AuthCommandService>(provider => 
@@ -93,6 +92,9 @@ builder.Services.AddScoped<AuthCommandService>(provider =>
         provider.GetRequiredService<IUserRepository>(),
         jwtSecret
     ));
+
+// Registrar Profile
+builder.Services.AddScoped<IProfileQueryService, ProfileQueryService>();
 
 var app = builder.Build();
 

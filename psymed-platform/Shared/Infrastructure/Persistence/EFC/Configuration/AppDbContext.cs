@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration.Interceptors;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using psymed_platform.Profiles.Domain.Model.Aggregates;
 using static psymed_platform.Medication.Domain.Model.Aggregates.Medication;
 
 namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
@@ -11,6 +12,7 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
         public DbSet<psymed_platform.Tasks.Domain.Model.Aggregates.Task> Tasks { get; set; }
         public AppDbContext() { }
 
+        public DbSet<Profile> Profiles { get; set; }
         public DbSet<Medication.Domain.Model.Aggregates.Medication> Medications { get; set; }
         public DbSet<psymed_platform.Appoiment_Administration.Domain.Models.Appointment> Appointments { get; set; }
         public DbSet<psymed_platform.IAM.Domain.Model.Aggregates.User> Users { get; set; }
@@ -86,6 +88,23 @@ namespace psymed_platform.Shared.Infrastructure.Persistence.EFC.Configuration
                 entity.Property(t => t.Id).IsRequired();
             });
             
+        
+            // Profiles
+            modelBuilder.Entity<Profile>()
+                .ToTable("Profiles")
+                .HasKey(p => p.Id);
+        
+            modelBuilder.Entity<Profile>()
+                .OwnsOne(p => p.Name);
+        
+            modelBuilder.Entity<Profile>()
+                .OwnsOne(p => p.Email);
+        
+            modelBuilder.Entity<Profile>()
+                .OwnsOne(p => p.Phone);
+        
+            modelBuilder.Entity<Profile>()
+                .OwnsOne(p => p.Role);
         }
     }
 }

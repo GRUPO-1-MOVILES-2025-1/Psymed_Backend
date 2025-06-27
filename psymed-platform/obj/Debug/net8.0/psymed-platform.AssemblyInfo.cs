@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("psymed-platform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5babdc660c49eca43c86e3ebc07739af480f86da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72cd02035d14447bd79a81d422af00f3fbc81fc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("psymed-platform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("psymed-platform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

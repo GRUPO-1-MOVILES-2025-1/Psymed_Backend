@@ -21,4 +21,7 @@ public interface IProfileQueryService
     /// <param name="query">The query for retrieving a profile by its ID.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains the profile, or null if not found.</returns>
     Task<Profile?> Handle(GetProfileByIdQuery query);
+    
+    
+    Task<Profile?> Handle(GetProfileByUserIdQuery query);
 }

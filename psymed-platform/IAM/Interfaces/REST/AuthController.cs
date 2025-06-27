@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using psymed_platform.IAM.Appilcation.Internal.CommandServices;
 using psymed_platform.IAM.Domain.Model.Commands;
 using psymed_platform.IAM.Interfaces.REST.Resources;
+using psymed_platform.Profiles.Domain.Model.Commands;
+using psymed_platform.Profiles.Domain.Services;
 
 namespace psymed_platform.IAM.Interfaces.REST
 {
@@ -11,10 +13,13 @@ namespace psymed_platform.IAM.Interfaces.REST
     public class AuthController : ControllerBase
     {
         private readonly AuthCommandService _authCommandService;
+        
+        private readonly IProfileCommandService _profileCommandService;
 
-        public AuthController(AuthCommandService authCommandService)
+        public AuthController(AuthCommandService authCommandService, IProfileCommandService profileCommandService)
         {
             _authCommandService = authCommandService;
+            _profileCommandService = profileCommandService;
         }
 
         [HttpPost("login")]
@@ -53,7 +58,27 @@ namespace psymed_platform.IAM.Interfaces.REST
                 Ubication = resource.Ubication
             };
 
-            var (success, error) = await _authCommandService.RegisterAsync(command);
+            var (success, error, userId) = await _authCommandService.RegisterAsync(command);
+
+            if (success)
+            {
+                // Crear Profile asociado
+                var profileCommand = new CreateProfileCommand
+                {
+                    UserId = userId,
+                    FirstName = resource.Name,
+                    LastName = resource.LastName,
+                    Email = resource.Email,
+                    Phone = resource.Phone,
+                    Role = "Doctor",
+                    Height = "0",
+                    Weight = "0",
+                    BirthDate = resource.BirthDate,
+                    Ubication = resource.Ubication
+                };
+
+                await _profileCommandService.Handle(profileCommand);
+            }
 
             return Ok(new AuthResponseResource
             {

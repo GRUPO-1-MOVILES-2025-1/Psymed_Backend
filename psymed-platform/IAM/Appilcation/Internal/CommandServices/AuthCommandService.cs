@@ -37,13 +37,13 @@ namespace psymed_platform.IAM.Appilcation.Internal.CommandServices
             return (true, token);
         }
 
-        public async Task<(bool success, string error)> RegisterAsync(RegisterUserCommand command)
+        public async Task<(bool success, string error, string userId)> RegisterAsync(RegisterUserCommand command)
         {
             if (await _userRepository.GetByUsernameAsync(command.Username) != null)
-                return (false, "Username already exists");
+                return (false, "Username already exists", string.Empty);
 
             if (await _userRepository.GetByEmailAsync(command.Email) != null)
-                return (false, "Email already exists");
+                return (false, "Email already exists", string.Empty);
 
             var passwordHash = BC.HashPassword(command.Password);
             var user = new Domain.Model.Aggregates.User(
@@ -56,9 +56,11 @@ namespace psymed_platform.IAM.Appilcation.Internal.CommandServices
                 command.Gender,
                 command.Phone,
                 command.Ubication
-            );            
+            );
+
             await _userRepository.AddAsync(user);
-            return (true, null);
+
+            return (true, null, user.Id);
         }
 
         private string GenerateJwtToken(Domain.Model.Aggregates.User user)
